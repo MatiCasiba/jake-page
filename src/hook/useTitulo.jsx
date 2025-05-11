@@ -1,8 +1,10 @@
+import { useEffect } from "react"
 
-
-const useTitulo = () => {
+const useTitulo = (textoTitulo = 'Sin título') => {
   return (
-    <div>useTitulo</div>
+    useEffect(()=> {
+        document.title = `Jakepage - ${textoTitulo}`
+    }, [])
   )
 }
 
