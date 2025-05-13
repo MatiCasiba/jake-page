@@ -33,6 +33,35 @@ export default Header
 ```
 Dentro del archivo importe su estilo, Navbar.jsx y SearchBar.jsx con la finalidad de que se vieran dentro de este componete y que esté organizado mi código, para no tener todos los códigos escritos dentro de Header.jsx, decido separarlos en otros componentes y despues ir exportando.
 
+#### Navbar.jsx
+```js
+import menuItems from "../../constants/menuItems"
+import NavItem from "./NavItem"
+
+const Navbar = () => {
+  return (
+    <>
+      <nav className="nav-bar">
+        # las clases lo hago de forma BEM que me es útil para escalar estilos
+        <ul className="nav-bar__nav-list">
+          {
+            menuItems.map((item)=> (
+              <NavItem item={item} key={item.id} />
+            ))
+          }
+        </ul>
+      </nav>
+    </>
+  )
+}
+
+export default Navbar
+```
+Dentro de este archivo importo el menuItems (contiene los datos del menú), me traigo también NavItem, este es un componente que renderiza cada ítem de forma individual.
+
+* ¿Que hay dentro de este componente?
+Navbar devuelve una estructura semántica de navegación (<nav> con una lista <ul>), hago uso de .map() sobre menuItems para iterar y renderizar un componente <NavItem> por cada ítem. Le paso el objeto item como prop y uso item.id como key (es una buena práctica en React para optimizar el renderizado de listas, por eso lo realicé de esta forma)
+
 ## Constants
 Dentro de esta carpeta se encontraráel archivo menuItems.js:
 
