@@ -1,7 +1,18 @@
+import './Header.scss'
+import Navbar from "../navbar/Navbar"
+import SearchBar from "../navbar/SearchBar"
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+      <header className="main-header">
+        <input type="checkbosx" id="menu" />
+        
+        <Navbar />
+        <SearchBar />
+
+      </header>
+    </>
   )
 }
 

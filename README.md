@@ -3,6 +3,36 @@ Link de la página:
 # Jake Page
 Haré una página acerca del mejor amigo que uno puede tener en este mundo, un perro, más que una mascota, un integrante más en mi familia que ahora espero que se encuentre en una mejor vida. Su nombre era Jake, espero que esté descansando en paz
 
+## Components
+Dentro de esta carpeta se encontrará los componente que voy a usar para esta página, los archivos están organizados en distintas carpetas. En la carpeta components tengo las carpetas footer, header, navbar y spinner. Cada uno contiene archivos jsx y scss.
+
+### Header
+En la carpeta header se encontrará los archivos Header.jsx y Header.scss (la estructura del encabezado y su estilo)
+
+#### Header.jsx:
+```js
+import './Header.scss'
+import Navbar from "../navbar/Navbar"
+import SearchBar from "../navbar/SearchBar"
+
+const Header = () => {
+  return (
+    <>
+      <header className="main-header">
+        <input type="checkbosx" id="menu" />
+        
+        <Navbar />
+        <SearchBar />
+
+      </header>
+    </>
+  )
+}
+
+export default Header
+```
+Dentro del archivo importe su estilo, Navbar.jsx y SearchBar.jsx con la finalidad de que se vieran dentro de este componete y que esté organizado mi código, para no tener todos los códigos escritos dentro de Header.jsx, decido separarlos en otros componentes y despues ir exportando.
+
 ## Constants
 Dentro de esta carpeta se encontraráel archivo menuItems.js:
 
