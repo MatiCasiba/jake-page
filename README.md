@@ -33,6 +33,9 @@ export default Header
 ```
 Dentro del archivo importe su estilo, Navbar.jsx y SearchBar.jsx con la finalidad de que se vieran dentro de este componete y que esté organizado mi código, para no tener todos los códigos escritos dentro de Header.jsx, decido separarlos en otros componentes y despues ir exportando.
 
+### Navbar
+En la carpeta navbar se encontrarán los componetes Navbar.jsx - NavItem.jsx y SearchBar.jsx que luegos serán utilizados en el componete Header.jsx
+
 #### Navbar.jsx
 ```js
 import menuItems from "../../constants/menuItems"
