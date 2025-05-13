@@ -100,6 +100,9 @@ const menuItems = [
 
 export default menuItems
 ```
+* id: es un identificard único (importante para las keys en React)
+* nombre: el texto que se va a mostrar en el navegador
+* ruta: tiene la URL a la que debe navegar
 
 ## Hook
 Dentro de la carpeta hook usaré códigos que lo voy a poder volver a utilizar en algún otro archivo, siempre y cuando importe el hook que necesite, en este caso tengo un hook para los títulos de cada parte de la página. Ejemplo: si me encuentro en inicio, en la pestaña de la página debe decir "Jakepage - Inicio"
