@@ -60,7 +60,7 @@ export default Navbar
 Dentro de este archivo importo el menuItems (contiene los datos del menú), me traigo también NavItem, este es un componente que renderiza cada ítem de forma individual.
 
 * ¿Que hay dentro de este componente?
-Navbar devuelve una estructura semántica de navegación (<nav> con una lista <ul>), hago uso de .map() sobre menuItems para iterar y renderizar un componente <NavItem> por cada ítem. Le paso el objeto item como prop y uso item.id como key (es una buena práctica en React para optimizar el renderizado de listas, por eso lo realicé de esta forma)
+Navbar devuelve una estructura semántica de navegación (nav con una lista ul), hago uso de .map() sobre menuItems para iterar y renderizar un componente NavItem por cada ítem. Le paso el objeto item como prop y uso item.id como key (es una buena práctica en React para optimizar el renderizado de listas, por eso lo realicé de esta forma)
 
 #### NavItem.jsx
 
@@ -81,7 +81,7 @@ const NavItem = ({item}) => {
 
 export default NavItem
 ```
-Dentro de este archivo hago uso de NavLink de react router, este componente me permite crear enlaces que reconocen cuál está activo. El componente NavItem, va a recibir una prop llamada item (un objeto con nombre y ruta), renderiza un <li> que contiene un <NavLink> dentro de este contengo:
+Dentro de este archivo hago uso de NavLink de react router, este componente me permite crear enlaces que reconocen cuál está activo. El componente NavItem, va a recibir una prop llamada item (un objeto con nombre y ruta), renderiza un listado que contiene un NavLink, dentro de este tengo:
 * to={item.ruta} que define la URL de navegación.
 * item.nombre es el texto que se muestra
 * también verás que contiene un className qque es para estilo
