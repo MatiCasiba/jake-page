@@ -84,7 +84,44 @@ export default NavItem
 Dentro de este archivo hago uso de NavLink de react router, este componente me permite crear enlaces que reconocen cuál está activo. El componente NavItem, va a recibir una prop llamada item (un objeto con nombre y ruta), renderiza un listado que contiene un NavLink, dentro de este tengo:
 * to={item.ruta} que define la URL de navegación.
 * item.nombre es el texto que se muestra
-* también verás que contiene un className qque es para estilo
+* también verás que contiene un className que es para estilo
+
+#### SearchBar.jsx
+En este archivo estaré armando la estructura de la barra de navegación, osea donde podrás escribir y buscar, en este caso buscaré imagenes con nombres que asignaré en las imagenes. 
+```js
+
+const SearchBar = () => {
+  return (
+    <>
+      <div className="search-bar"> # Contenedor de todo el buscador
+
+        <div className="search-bar__logo-container">
+          <img src="..." alt="logo jake" className="search-bar__logo-img" />
+        </div> # un contenedor para un logo
+
+        <form action="#" className="search-bar__form-container">
+          <label htmlFor="busqueda" className="search-bar__form-label">
+            <img className="search-bar__logo-search" src="..." alt="logo del bucador" />
+          </label>
+          <input type="search" id="busqueda" className="search-bar__form-search" />
+          <button type="submit" className="search-bar__form-submit">Buscar</button>
+        </form> # acá se encontrará la barra buscadora
+
+        <div className="menu-toogle">
+          <label htmlFor="" className="menu-toogle__label">
+            <span className="menu-toogle__top"></span>
+            <span className="menu-toogle__mid"></span>
+            <span className="menu-toogle__bottom"></span>
+          </label>
+        </div> # un contenedor donde habrá un menu, este se mostrará solo para dispositivo moviles
+
+      </div>
+    </>
+  )
+}
+
+export default SearchBar
+```
 
 ## Constants
 Dentro de esta carpeta se encontraráel archivo menuItems.js:
