@@ -1,7 +1,14 @@
+import { NavLink } from "react-router"
 
-const NavItem = () => {
+const NavItem = ({item}) => {
   return (
-    <div>NavItem</div>
+    <>
+      <li className="nav-bar__nav-item">
+        <NavLink to={item.ruta} className="nav-bar__nav-link">
+          {item.nombre}
+        </NavLink>
+      </li>
+    </>
   )
 }
 
